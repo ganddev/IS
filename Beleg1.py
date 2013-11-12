@@ -64,10 +64,11 @@ if __name__ == "__main__":
     plt.title("Countourplot")
 	
     countourData = []
-    for t0 in t:
+    for t0 in tettas0:
         countourDataLine = []
-        for t1 in t:
-            countourDataLine.append(costs(tettas0, tettas1, t0, t1))
+        for t1 in tettas1:
+            countourDataLine.append(costs(x, y, t0, t1))
         countourData.append(countourDataLine)
-    plt.contour(t , t, countourData)
+    print countourData
+    plt.contour(tettas0 , tettas1, countourData)
     plt.show()
