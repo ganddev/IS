@@ -23,13 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Beleg1.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Beleg1.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Beleg1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.1903553" vertical-offset="738" max-vertical-offset="1326">
+            <state line="33" column="25" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1326">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="7" selection-start="322" selection-end="322" vertical-scroll-proportion="0.8274112" vertical-offset="286" max-vertical-offset="748">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,6 +55,7 @@
       <list>
         <option value="$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg1_boern_daniel.py" />
         <option value="$PROJECT_DIR$/Beleg1.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -269,7 +279,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -386,10 +396,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Beleg1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.1903553" vertical-offset="738" max-vertical-offset="1326">
+        <state line="33" column="25" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1326">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="7" selection-start="322" selection-end="322" vertical-scroll-proportion="0.8274112" vertical-offset="286" max-vertical-offset="748">
+          <folding />
         </state>
       </provider>
     </entry>
