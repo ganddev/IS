@@ -26,7 +26,7 @@
       <file leaf-file-name="Beleg1.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Beleg1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.79761904" vertical-offset="738" max-vertical-offset="1326">
+            <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.1903553" vertical-offset="738" max-vertical-offset="1326">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -268,7 +268,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -279,7 +279,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28692698" sideWeight="0.5003723" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28692698" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28664497" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -386,7 +386,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Beleg1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.79761904" vertical-offset="738" max-vertical-offset="1326">
+        <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="1.1903553" vertical-offset="738" max-vertical-offset="1326">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
