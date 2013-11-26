@@ -12,8 +12,9 @@ def createTrainData(tetta0, tetta1, size):
 def scale(data):
     """Skaliert die Daten auf -1 < x < +1"""
     mu = np.sum(data) / len(data)
-    std = np.sqrt(np.sum(np.square(data) - np.square(mu)))
-    return (data - mu) / std
+    std = np.sqrt(np.sum(np.square(data - mu) / (len(data) - 1)))
+    return (data - mu) / (2 * std)
+    #return (data - min(data))/(max(data)-min(data))
 
 def hypothesis(tetta0, tetta1, dataX):
     """Die Hypothese"""
@@ -40,10 +41,10 @@ def gradiantDesc(tetta0, tetta1, dataX, dataY, learnrate, dataCosts, tettas0, te
         return temp0, temp1, dataCosts, tettas0, tettas1
 
 if __name__ == "__main__":
-    [x,y] = createTrainData(0, 0.5, 50)
-#x = scale(x)
-#y = scale(y)
-    [tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.8,[], [], [])
+    [x,y] = createTrainData(0, 1, 50)
+    x = scale(x)
+    #y = scale(y)
+    [tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.1,[], [], [])
     t = np.arange(min(x), max(x), 0.1)
     g = tetta0 + tetta1 * t
 
