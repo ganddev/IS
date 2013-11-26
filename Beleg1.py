@@ -12,8 +12,9 @@ def createTrainData(tetta0, tetta1, size):
 def scale(data):
     """Skaliert die Daten auf -1 < x < +1"""
     mu = np.sum(data) / len(data)
-    std = np.sqrt(np.sum(np.square(data) - np.square(mu)))
-    return (data - mu) / std
+    std = np.sqrt(np.sum(np.square(data - mu) / (len(data) - 1)))
+    return (data - mu) / (2 * std)
+    #return (data - min(data))/(max(data)-min(data))
 
 def hypothesis(tetta0, tetta1, dataX):
     """Die Hypothese"""
@@ -45,6 +46,7 @@ def gradiantDesc(tetta0, tetta1, dataX, dataY, learnrate, dataCosts, tettas0, te
         return temp0, temp1, dataCosts, tettas0, tettas1
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     [x,y] = createTrainData(0, 0.5, 50)
     #x = scale(x)
     #y = scale(y)
@@ -59,6 +61,14 @@ if __name__ == "__main__":
     #plt.ylabel("y $\in$ $N$")
     #plt.plot(t, g)
     #plt.plot(x, y, 'ro')
+=======
+    [x,y] = createTrainData(0, 1, 50)
+    x = scale(x)
+    #y = scale(y)
+    [tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.1,[], [], [])
+    t = np.arange(min(x), max(x), 0.1)
+    g = tetta0 + tetta1 * t
+>>>>>>> c1b575d3aeb09f64969e30867b84f39bca9a6c72
 
     #plt.subplot(132)
     #plt.title("Gradient Descent")
@@ -77,6 +87,19 @@ if __name__ == "__main__":
     #plt.contour(tettas0 , tettas1, contourData)
     #plt.show()
 
+<<<<<<< HEAD
     tettas  = np.array([4,2,7])
     xVektor = a = np.array([4,2,7])
     print multiVarLinReg(tettas, xVektor)
+=======
+    plt.subplot(133)
+    plt.title("Countourplot")
+    contourData = []
+    for tetta0 in tettas0:
+        contourDataLine = []
+        for tetta1 in tettas1:
+            contourDataLine.append(costs(x, y, tetta0, tetta1))
+        contourData.append(contourDataLine)
+    plt.contour(tettas0 , tettas1, contourData)
+    plt.show()
+>>>>>>> c1b575d3aeb09f64969e30867b84f39bca9a6c72
