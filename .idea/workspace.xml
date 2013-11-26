@@ -23,22 +23,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Beleg1.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Beleg1.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Beleg1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="25" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1326">
+            <state line="27" column="45" selection-start="852" selection-end="852" vertical-scroll-proportion="0.13670886" vertical-offset="405" max-vertical-offset="1496">
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="7" selection-start="322" selection-end="322" vertical-scroll-proportion="0.8274112" vertical-offset="286" max-vertical-offset="748">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -54,8 +45,8 @@
     <option name="changedFiles">
       <list>
         <option value="$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg1_boern_daniel.py" />
-        <option value="$PROJECT_DIR$/Beleg1.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Beleg1.py" />
       </list>
     </option>
   </component>
@@ -93,9 +84,18 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/awesome(ness)/InfoS" />
     <property name="FullScreen" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -278,7 +278,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -288,8 +288,8 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25401685" sideWeight="0.7626527" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28692698" sideWeight="0.5003723" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28664497" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2852292" sideWeight="0.5003723" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852292" sideWeight="0.4996277" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -314,6 +314,33 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Beleg1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="871" selection-end="877" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1496">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Beleg1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="29" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1343">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Beleg1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="25" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1326">
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Beleg1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="4" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0" vertical-offset="881" max-vertical-offset="1326">
@@ -341,11 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg101_bjoern_daniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Beleg1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="18" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1564">
@@ -353,11 +375,6 @@
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/contour_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="13" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="2040" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Beleg1.py">
@@ -369,44 +386,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg1_boern_daniel.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="16" selection-start="1981" selection-end="1981" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg1_boern_daniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="36" selection-start="0" selection-end="1974" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1241" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/contour_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="13" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-0.120781526" vertical-offset="697" max-vertical-offset="1972" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg101_bjoern_daniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="38" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Dropbox/awesome(ness)/InfoS/Beleg102_bjoern_daniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="0" selection-end="2198" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1292" />
+        <state line="36" column="7" selection-start="322" selection-end="322" vertical-scroll-proportion="0.65482235" vertical-offset="354" max-vertical-offset="748" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Beleg1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1326">
+        <state line="27" column="45" selection-start="852" selection-end="852" vertical-scroll-proportion="0.13670886" vertical-offset="405" max-vertical-offset="1496">
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="7" selection-start="322" selection-end="322" vertical-scroll-proportion="0.8274112" vertical-offset="286" max-vertical-offset="748">
-          <folding />
         </state>
       </provider>
     </entry>

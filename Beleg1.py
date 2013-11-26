@@ -24,6 +24,11 @@ def costs(dataX, dataY, tetta0, tetta1):
     factor = 1.0 / (2 * len(dataX))
     return factor * np.sum(np.square(hypothesis(tetta0, tetta1, dataX) - dataY))
 
+def multiVarLinReg(tettas, xVektor):
+    """Die multivariate lineare Regression"""
+    return np.dot(tettas, xVektor)
+
+
 def gradiantDesc(tetta0, tetta1, dataX, dataY, learnrate, dataCosts, tettas0, tettas1):
     """Gradienten-Abstiegs-Verfahren"""
     factor = 1.0 / len(dataX)
@@ -34,39 +39,44 @@ def gradiantDesc(tetta0, tetta1, dataX, dataY, learnrate, dataCosts, tettas0, te
     tettas0.append(temp0)
     tettas1.append(temp1)
     dataCosts.append(costs(dataX, dataY, tetta0, tetta1))
-    if(costs(dataX, dataY, tetta0, tetta1) - costs(dataX, dataY, temp0, temp1) > 0.0001):
+    if(costs(dataX, dataY, tetta0, tetta1) - costs(dataX, dataY, temp0, temp1) > 0.00001):
         return gradiantDesc(temp0, temp1, dataX, dataY, learnrate, dataCosts, tettas0, tettas1)
     else:
         return temp0, temp1, dataCosts, tettas0, tettas1
 
 if __name__ == "__main__":
     [x,y] = createTrainData(0, 0.5, 50)
-#x = scale(x)
-#y = scale(y)
-    [tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.8,[], [], [])
-    t = np.arange(min(x), max(x), 0.1)
-    g = tetta0 + tetta1 * t
+    #x = scale(x)
+    #y = scale(y)
 
-    plt.subplot(131)
-    plt.title("Berechnete Gerade und Testdaten")
-    plt.xlabel("x $\in$ $N$")
-    plt.ylabel("y $\in$ $N$")
-    plt.plot(t, g)
-    plt.plot(x, y, 'ro')
+    #[tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.79991,[], [], [])
+    #t = np.arange(min(x), max(x), 0.1)
+    #g = tetta0 + tetta1 * t
 
-    plt.subplot(132)
-    plt.title("Gradient Descent")
-    plt.ylabel("Kosten $\in$ $R$")
-    plt.xlabel("Anzahl der Iterationen $\in$ $N$")
-    plt.plot(dataCosts)
+    #plt.subplot(131)
+    #plt.title("Berechnete Gerade und Testdaten")
+    #plt.xlabel("x $\in$ $N$")
+    #plt.ylabel("y $\in$ $N$")
+    #plt.plot(t, g)
+    #plt.plot(x, y, 'ro')
 
-    plt.subplot(133)
-    plt.title("Countourplot")
-    contourData = []
-    for tetta0 in tettas0:
-        contourDataLine = []
-        for tetta1 in tettas1:
-            contourDataLine.append(costs(x, y, tetta0, tetta1))
-        contourData.append(contourDataLine)
-    plt.contour(tettas0 , tettas1, contourData)
-    plt.show()
+    #plt.subplot(132)
+    #plt.title("Gradient Descent")
+    #plt.ylabel("Kosten $\in$ $R$")
+    #plt.xlabel("Anzahl der Iterationen $\in$ $N$")
+    #plt.plot(dataCosts)
+
+    #plt.subplot(133)
+    #plt.title("Countourplot")
+    #contourData = []
+    #for tetta0 in tettas0:
+    #    contourDataLine = []
+    #    for tetta1 in tettas1:
+    #        contourDataLine.append(costs(x, y, tetta0, tetta1))
+    #    contourData.append(contourDataLine)
+    #plt.contour(tettas0 , tettas1, contourData)
+    #plt.show()
+
+    tettas  = np.array([4,2,7])
+    xVektor = a = np.array([4,2,7])
+    print multiVarLinReg(tettas, xVektor)
