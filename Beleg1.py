@@ -1,3 +1,4 @@
+from docutils.utils.math.latex2mathml import munder
 import numpy as np
 import matplotlib .pyplot as plt
 import pylab
@@ -46,52 +47,15 @@ def gradiantDesc(tetta0, tetta1, dataX, dataY, learnrate, dataCosts, tettas0, te
         return temp0, temp1, dataCosts, tettas0, tettas1
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    [x,y] = createTrainData(0, 0.5, 50)
-    #x = scale(x)
-    #y = scale(y)
-
-    #[tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.79991,[], [], [])
-    #t = np.arange(min(x), max(x), 0.1)
-    #g = tetta0 + tetta1 * t
-
-    #plt.subplot(131)
-    #plt.title("Berechnete Gerade und Testdaten")
-    #plt.xlabel("x $\in$ $N$")
-    #plt.ylabel("y $\in$ $N$")
-    #plt.plot(t, g)
-    #plt.plot(x, y, 'ro')
-=======
     [x,y] = createTrainData(0, 1, 50)
     x = scale(x)
     #y = scale(y)
     [tetta0, tetta1, dataCosts, tettas0, tettas1]=  gradiantDesc(-1,4,x,y,0.1,[], [], [])
     t = np.arange(min(x), max(x), 0.1)
     g = tetta0 + tetta1 * t
->>>>>>> c1b575d3aeb09f64969e30867b84f39bca9a6c72
-
-    #plt.subplot(132)
-    #plt.title("Gradient Descent")
-    #plt.ylabel("Kosten $\in$ $R$")
-    #plt.xlabel("Anzahl der Iterationen $\in$ $N$")
-    #plt.plot(dataCosts)
-
-    #plt.subplot(133)
-    #plt.title("Countourplot")
-    #contourData = []
-    #for tetta0 in tettas0:
-    #    contourDataLine = []
-    #    for tetta1 in tettas1:
-    #        contourDataLine.append(costs(x, y, tetta0, tetta1))
-    #    contourData.append(contourDataLine)
-    #plt.contour(tettas0 , tettas1, contourData)
-    #plt.show()
-
-<<<<<<< HEAD
     tettas  = np.array([4,2,7])
     xVektor = a = np.array([4,2,7])
     print multiVarLinReg(tettas, xVektor)
-=======
     plt.subplot(133)
     plt.title("Countourplot")
     contourData = []
@@ -102,4 +66,8 @@ if __name__ == "__main__":
         contourData.append(contourDataLine)
     plt.contour(tettas0 , tettas1, contourData)
     plt.show()
->>>>>>> c1b575d3aeb09f64969e30867b84f39bca9a6c72
+
+    a = np.array([1,2,3])
+    b = np.array([1,2,3])
+
+    print multiVarLinReg(a,b)

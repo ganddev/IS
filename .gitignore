@@ -34,5 +34,11 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
-.idea/*
+.idea
 *
+workspace.xml
+scopes
+.name
+encodings.xml
+modules.xml
+vcs.xml
