@@ -29,8 +29,11 @@ def hypothesis(tettas, featureVektor):
 
 def costs(tettas, xMatrix, yVektor):
     """Kostenfunktion"""
+    summe = 0.0
     factor = 1.0 / (2 * len(yVektor))
-    return factor * np.sum(np.square(hypothesis(tettas, xMatrix) - yVektor))
+    for i in range(len(xMatrix)):
+        summe += np.sum(np.square(hypothesis(tettas.T, np.array([xMatrix[0][i],xMatrix[1][i],xMatrix[2][i]])) - yVektor))
+    return factor * summe
 
 def logisticFunction(tettas, xVektor):
     """Logistische Funktion"""
@@ -40,16 +43,17 @@ def logisticFunction(tettas, xVektor):
 def gradiantDesc(tettas, features, dataY, tettaJOld, dataCosts, learnrate):
     """Gradienten-Abstiegs-Verfahren"""
     factor = 1/len(dataY)
-    tettaJTmp = (learnrate*factor * np.sum(np.square(hypothesis(tettas, features) - dataY)*features))
-    print costs(tettas,features,dataY)
-
-    return tettaJTmp
+    summe = 0.0
+    for i in range(len(features)):
+        summe += np.dot(np.square(hypothesis(tettas.T, np.array([features[0][i],features[1][i],features[2][i]])) - dataY[i])[0],np.array([features[0][i],features[1][i],features[2][i]]))
+    print summe
+    tettaJTmp = learnrate*factor*summe
+    #return tettaJTmp
 
 if __name__ == "__main__":
     tettas = np.array([1,2,3])
     #tettas1 = np.array([[1,2,3],[3,4,3],[5,6,3],[5,6,3]]).T
     #print tettas1
     [features,dataY] = createTrainData(tettas,10)
-    #print features
-    print gradiantDesc(tettas, features.T, dataY, 0, [], 0.5)
+    gradiantDesc(tettas, features.T, dataY, 0, [], 0.5)
 
