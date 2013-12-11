@@ -45,7 +45,7 @@ def logisticFunction(tettas, xVektor):
     return 1.0/ (1+np.exp(-hypothesis(tettas,xVektor)))
 
 
-def gradiantDesc(tettas, features, dataY, learnrate):
+def gradiantDesc(tettas, features, dataY, learnrate, dataCosts):
     """Gradienten-Abstiegs-Verfahren"""
     factor = 1.0/len(dataY)
     summe = 0.0
@@ -54,28 +54,69 @@ def gradiantDesc(tettas, features, dataY, learnrate):
         summe += np.dot(hypothesis(tettas, features[i]) - dataY[i][0],features[i])
     tettasTmp = tettas - (learnrate * factor * summe)
     dataCostsNew = costs(tettasTmp,features.T,dataY)
-    print tettas
-    print dataCostsNew
+    dataCosts.append(dataCostsNew)
     if (dataCostsOld - dataCostsNew > 0.1):
-        return gradiantDesc(tettasTmp, features, dataY, learnrate)
+        return gradiantDesc(tettasTmp, features, dataY, learnrate, dataCosts)
     else:
-        return tettasTmp, dataCostsNew
+        return tettasTmp, dataCosts
+
+def logisticRegression(tettas, features):
+    z = []
+    for i in range(len(features)):
+       # print hypothesis(tettas.T, features[i])
+        z.append(logisticFunction(tettas.T, features[i]))
+    return z
 
 if __name__ == "__main__":
     [features, dataY] = createTrainData(np.array([0,1,1]),100)
-    [tettas, costs] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.5)
+    [tettas, dataCosts] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.1, [])
+    [tettas2, dataCosts2] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.2, [])
+    [tettas3, dataCosts3] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.4, [])
+    [tettas4, dataCosts4] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.6, [])
+    [tettas5, dataCosts5] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.8, [])
+    [tettas6, dataCosts6] = gradiantDesc(np.array([2,1,4]), features, dataY, 1.0, [])
 
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
+
+    logisticRegression(tettas, features)
+
+    plt.title("3D Data")
+    fig1 = plt.figure(1)
+    ax = fig1.gca(projection='3d')
     ax.scatter(features[:,2], features[:,1], dataY[:,0], s=20, c='r', label='DataPoints')
 
-    ax.legend()
-
-    x = np.linspace(-2,2,40)
+    x = np.linspace(-2,2,100)
     y = x
     x, y = np.meshgrid(x,y)
     z = tettas[0] + tettas[1] * x + tettas[2] * y
     ax.plot_surface(x,y,z)
+    ax.legend()
+
+    fig2 = plt.figure(2)
+    plt.subplot(212)
+    plt.title("Costs")
+    plt.plot(np.arange(len(dataCosts)),dataCosts, label = "Learnrate 0.1")
+    plt.plot(np.arange(len(dataCosts2)),dataCosts2, label = "Learnrate 0.2")
+    plt.plot(np.arange(len(dataCosts3)),dataCosts3, label = "Learnrate 0.4")
+    plt.plot(np.arange(len(dataCosts4)),dataCosts4, label = "Learnrate 0.6")
+    plt.plot(np.arange(len(dataCosts5)),dataCosts5, label = "Learnrate 0.8")
+    plt.plot(np.arange(len(dataCosts6)),dataCosts6, label = "Learnrate 1.0")
+    plt.legend(bbox_to_anchor=(1.0, 1), loc=1, borderaxespad=0.)
+    plt.ylabel('Costs')
+
+    y = (logisticRegression(tettas,features))
+    y.sort()
+    plt.subplot(222)
+    plt.title("Logistic")
+    plt.plot(y)
+
+
+    z = logisticRegression(tettas,features)
+    #z1 = tettas[0] + z * x + z*y
+    fig3 = plt.figure()
+    ax = fig3.gca(projection='3d')
+    ax.scatter(features[:,2], features[:,1], z, s=20, c='b', label='DataPoints')
+    #bx.plot_surface(x, y ,z1)
+    ax.legend()
 
     plt.show()
 
