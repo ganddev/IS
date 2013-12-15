@@ -103,11 +103,18 @@ if __name__ == "__main__":
     plt.legend(bbox_to_anchor=(1.0, 1), loc=1, borderaxespad=0.)
     plt.ylabel('Costs')
 
-    y = (logisticRegression(tettas,features))
-    y.sort()
-    plt.subplot(222)
+
+    x = np.arange(-3, 10,0.1)
+    y = (logisticRegression(np.array([0,1]),x))
+    print y
+    fig3 = plt.figure(3)
+    ax = fig3.add_subplot(222)
+    #plt.subplot(222)
+
+    ax.plot( x ,y)
+    ax.set_xlim(-3, 10)
+    ax.set_ylim(0, 1)
     plt.title("Logistic")
-    plt.plot(y)
 
 
     z = logisticRegression(tettas,features)
