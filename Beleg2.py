@@ -14,7 +14,7 @@ def createTrainData(tettas, size):
     dataX1 = np.random.normal(0, 1, size).reshape(size,1)
     dataX2 = np.random.normal(0, 1, size).reshape(size,1)
     gauss = np.random.normal(0, 0.5, size).reshape(size,1)
-    dataY = (tettas[0] + tettas[1] * dataX1 + tettas[2] * dataX2) + gauss
+    dataY = (-6 + 3 * dataX1 + 3 * dataX2) + gauss
     value1 = np.ones(size).reshape(size,1)
     features = np.concatenate((np.concatenate((value1, dataX1),axis=1), dataX2),axis=1)
 
@@ -62,13 +62,14 @@ def gradiantDesc(tettas, features, dataY, learnrate, dataCosts):
 
 def logisticRegression(tettas, features):
     z = []
+    featureSum = []
     for i in range(len(features)):
-       # print hypothesis(tettas.T, features[i])
+        featureSum.append((np.sum(features[i]),logisticFunction(tettas.T, features[i])))
         z.append(logisticFunction(tettas.T, features[i]))
-    return z
+    return z, featureSum
 
 if __name__ == "__main__":
-    [features, dataY] = createTrainData(np.array([0,1,1]),100)
+    [features, dataY] = createTrainData(np.array([0,1,1]),1000)
     [tettas, dataCosts] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.1, [])
     [tettas2, dataCosts2] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.2, [])
     [tettas3, dataCosts3] = gradiantDesc(np.array([2,1,4]), features, dataY, 0.4, [])
@@ -104,20 +105,18 @@ if __name__ == "__main__":
     plt.ylabel('Costs')
 
 
-    x = np.arange(-3, 10,0.1)
-    y = (logisticRegression(np.array([0,1]),x))
-    print y
+    [y,featureSum] = (logisticRegression(tettas,features))
+    featureSum.sort()
     fig3 = plt.figure(3)
     ax = fig3.add_subplot(222)
-    #plt.subplot(222)
-
-    ax.plot( x ,y)
-    ax.set_xlim(-3, 10)
-    ax.set_ylim(0, 1)
+    plt.subplot(222)
+    ax.scatter(*zip(*featureSum))
+    ax.set_xlim(-10, 10)
+    ax.set_ylim(-0.1, 1.1)
     plt.title("Logistic")
 
 
-    z = logisticRegression(tettas,features)
+    [z, featureSumme] = logisticRegression(tettas,features)
     #z1 = tettas[0] + z * x + z*y
     fig3 = plt.figure()
     ax = fig3.gca(projection='3d')
@@ -127,3 +126,4 @@ if __name__ == "__main__":
 
     plt.show()
 
+ #erste werte gehoert zu der aus den features; jeweilige  feature Vektoren summieren entsprechend sortieren... -6+3*x1+3*x2
