@@ -118,6 +118,59 @@ if __name__ == "__main__":
 
 #========================================================================================================
 
+    fig4 = plt.figure(4)
+
+    plt.subplot(121)
+    cov0 = np.array([[5,-4],[-4,3]])
+    mean0 = np.array([2.,3])
+    m0 = 100
+    r0 = np.random.multivariate_normal(mean0, cov0, m0)
+
+    cov1 = np.array([[5,-3],[-3,3]])
+    mean1 = np.array([1.,1])
+    m1 = 100
+    r1 = np.random.multivariate_normal(mean1, cov1, m1)
+
+    value2 = np.ones(m0+m1).reshape(m0+m1,1)
+
+    x31 = r0.T[0]
+    x32 = r1.T[0]
+    x33 = np.concatenate([x31,x32]).reshape(m0+m1,1)
+    y31 = r0.T[1]
+    y32 = r1.T[1]
+
+    y3 = np.concatenate([y31,y32]).reshape(m0+m1,1)
+    x3 = np.concatenate((value2, x33),axis=1)
+
+    [tettas_log, dataCosts_log] = gradiantDesc(np.array([10,-8]), x3, y3, 0.1, [])
+    [tettas_log2, dataCosts_log2] = gradiantDesc(np.array([10,-8]), x3, y3, 0.2, [])
+    [tettas_log3, dataCosts_log3] = gradiantDesc(np.array([10,-8]), x3, y3, 0.4, [])
+    [tettas_log4, dataCosts_log4] = gradiantDesc(np.array([10,-8]), x3, y3, 0.6, [])
+    [tettas_log5, dataCosts_log5] = gradiantDesc(np.array([10,-8]), x3, y3, 0.8, [])
+    [tettas_log6, dataCosts_log6] = gradiantDesc(np.array([10,-8]), x3, y3, 1.0, [])
+
+    plt.scatter(x33[:100],y3[:100], c='b', marker='o')
+    plt.scatter(x33[100:],y3[100:], c='r', marker='x')
+    x4 = np.linspace(-4,8,100) # 100 linearly spaced numbers
+    y4 = tettas_log[0] + tettas_log[1] * x4
+    plt.plot(x4,y4)
+    plt.xlabel('x1')
+    plt.ylabel('x2')
+
+    plt.subplot(122)
+    plt.title("Logistic")
+    x2 = np.linspace(-4,10,100) # 100 linearly spaced numbers
+    y2 = 1.0/ (1+np.exp(x2 - tettas_log[0]))
+    y0 = np.ones(len(x2)) * 0.5
+    plt.plot(x2,y2, label = "Log-function")
+    plt.plot(x2,y0, label = "f(x) = 0,5")
+    plt.vlines(tettas_log[0], -0.1, 1.1, linestyles='dashed', label = "Threshold: x = " + str(tettas_log[0]))
+    plt.legend(bbox_to_anchor=(1.0, 1), loc=1, borderaxespad=0.)
+    plt.xlabel('x')
+    plt.ylabel('h(x)')
+
+#==========================================================================================================
+
     fig3 = plt.figure(3)
 
     plt.subplot(221)
@@ -187,5 +240,6 @@ if __name__ == "__main__":
 
     plt.vlines(tettas_log[0], -0.1, 1.1, linestyles='dashed', label = "Threshold")
     plt.legend(bbox_to_anchor=(1.0, 1), loc=1, borderaxespad=0.)
+
 
     plt.show()
